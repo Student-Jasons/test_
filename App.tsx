@@ -4,6 +4,7 @@ import { Website } from './types';
 import Header from './components/Header';
 import WebsiteCard from './components/WebsiteCard';
 import AddWebsiteModal from './components/AddWebsiteModal';
+import Footer from './components/Footer';
 
 const App: React.FC = () => {
   const [websites, setWebsites] = useState<Website[]>([
@@ -52,9 +53,9 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-dark-bg text-dark-text selection:bg-brand-primary selection:text-white">
+    <div className="min-h-screen flex flex-col bg-dark-bg text-dark-text selection:bg-brand-primary selection:text-white">
       <Header onAddClick={openModal} />
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1">
         {websites.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {websites.map(website => (
@@ -83,6 +84,7 @@ const App: React.FC = () => {
         onClose={closeModal}
         onAdd={handleAddWebsite}
       />
+      <Footer />
     </div>
   );
 };
