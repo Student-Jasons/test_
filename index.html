@@ -1,47 +1,24 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interactive Profile Card</title>
+    <title>나만의 웹사이트 포트폴리오</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
-        darkMode: 'class',
         theme: {
           extend: {
-            fontFamily: {
-              sans: ['Montserrat', 'Noto Sans KR', 'sans-serif'],
-            },
             colors: {
-              'off-white': '#F8F9FA',
-              'charcoal-gray': '#212529',
-              'secondary-gray': '#868E96',
-              'accent-teal': '#1abc9c',
-              'accent-purple': '#9b59b6',
-              // Dark mode colors
-              'navy-dark': '#111827',
-              'charcoal-gray-dark': '#1F2937',
-              'secondary-gray-dark': '#9CA3AF',
-            },
-            keyframes: {
-              'fade-in-up': {
-                '0%': {
-                  opacity: '0',
-                  transform: 'translateY(20px)'
-                },
-                '100%': {
-                  opacity: '1',
-                  transform: 'translateY(0)'
-                },
-              }
-            },
-            animation: {
-              'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
+              'brand-primary': '#4f46e5',
+              'brand-secondary': '#7c3aed',
+              'dark-bg': '#111827',
+              'dark-card': '#1f2937',
+              'dark-border': '#374151',
+              'dark-text': '#f9fafb',
+              'dark-text-secondary': '#9ca3af',
             }
           }
         }
@@ -53,14 +30,14 @@
 {
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
   }
 }
 </script>
-  <script type="module" crossorigin src="/test_/assets/index-DovB6hCU.js"></script>
+  <script type="module" crossorigin src="./assets/index-DicR_f_l.js"></script>
 </head>
-  <body>
+  <body class="bg-dark-bg">
     <div id="root"></div>
   </body>
 </html>
